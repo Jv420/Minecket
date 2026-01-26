@@ -24,7 +24,7 @@
     <!--=== SEO ===-->
     <meta name="description" content="View your cart products.">
     <meta name="keywords" content="Dynathi, minecraft shop, minecraft server, cart Dynathi">
-    <meta name="author" content="Henry8K"> <!--=== Github: Henry8K ===--> 
+    <meta name="author" content="Jv420"> <!--=== Github: Henry8K ===--> 
     <meta name="robots" content="index, follow"> <!--=== Robots indexing ===-->
     <meta name="googlebot" content="index, follow"> <!--=== Robots indexing ===-->
     <link rel="canonical" href="https://Dynathi.vercel.app/HTML/Cart.html"> <!--=== Enter your URL here ===-->
@@ -42,7 +42,7 @@
             <a class="nav-item-1" href="../HTML/Index.html"><span>Home</span></a> 
             <a class="nav-item-2" href="../HTML/Shop.html"><span>Shop</span></a>
             <a class="nav-item-3" href="../HTML/Rules.html"><span>Rules</span></a>
-            <a class="nav-item-4" href="https://Discord.com"><span>Discord</span></a> 
+            <a class="nav-item-4" href="https://discord.gg/qAsHbwnXyJ"><span>Discord</span></a> 
             <a class="nav-item-5" href="https://minecraftpocket-servers.com/"><span>Vote</span></a>
         </div>
 
@@ -78,7 +78,7 @@
             <a href="../HTML/Index.html"><span>Home</span></a> 
             <a href="../HTML/Shop.html"><span>Shop</span></a>
             <a href="../HTML/Rules.html"><span>Rules</span></a>
-            <a href="https://discord.com"><span>Discord</span></a> 
+            <a href="https://discord.gg/qAsHbwnXyJ"><span>Discord</span></a> 
             <a href="../HTML/Login.html"><span>Login</span></a>
             <a href="../HTML/Cart.html"><span>View cart</span></a>
             <a href="https://minecraftpocket-servers.com/"><span>Vote</span></a>
@@ -98,7 +98,7 @@
                 
                 <div class="cart-item-content">
                     <h2>Bronze VIP</h2>
-                    <span>• USD 0.99</span>
+                    <span>• €3.99</span>
 
                     <ul>
                         <li>Early access to new minigames that will be launched in the future.</li>
@@ -108,7 +108,10 @@
                         <li>An exclusive Bronze emblem in the chat.</li>
                     </ul>
 
-                    <a href="#" class="btn btn-alert" id="remove-item-1">Remove</a>                    
+                    <div class="cart-item-actions">
+                        <a href="https://buy.stripe.com/aFacN54VxbHV46V4cV6sw00" class="btn btn-dark" target="_blank">Checkout</a>
+                        <a href="#" class="btn btn-alert" id="remove-item-1">Remove</a>
+                    </div>                  
                 </div>
             </div>
 
@@ -117,7 +120,7 @@
                 
                 <div class="cart-item-content">
                     <h2>Silver VIP</h2>
-                    <span>• USD 5.99</span>
+                    <span>• €5.99</span>
 
                     <ul>
                         <li>All VIP Bronze advantages.</li>
@@ -127,7 +130,10 @@
                         <li>An exclusive Silver emblem in the chat.</li>
                     </ul>
 
-                    <a href="#" class="btn btn-alert" id="remove-item-2">Remove</a>                    
+                    <div class="cart-item-actions">
+                        <a href="https://buy.stripe.com/test_00g7uT8n31HV2jCcN2" class="btn btn-dark" target="_blank">Checkout</a>
+                        <a href="#" class="btn btn-alert" id="remove-item-2">Remove</a>
+                    </div>                  
                 </div>
             </div>
             
@@ -136,7 +142,7 @@
                 
                 <div class="cart-item-content">
                     <h2>Gold VIP</h2>
-                    <span>• USD 9.99</span>
+                    <span>• €9.99</span>
 
                     <ul>
                         <li>All VIP Silver advantages.</li>
@@ -146,7 +152,10 @@
                         <li>An exclusive Gold emblem in the chat.</li>
                     </ul>
 
-                    <a href="#" class="btn btn-alert" id="remove-item-3">Remove</a>
+                    <div class="cart-item-actions">
+                        <a href="https://buy.stripe.com/test_8wM5mf0fL8LVcBO7sB" class="btn btn-dark" target="_blank">Checkout</a>
+                        <a href="#" class="btn btn-alert" id="remove-item-3">Remove</a>
+                    </div>  
                 </div>
             </div>    
 
@@ -155,7 +164,7 @@
                 
                 <div class="cart-item-content">
                     <h2>Cosmetics</h2>
-                    <span>• USD 2.99</span>
+                    <span>• €15.99</span>
 
                     <ul>
                         <li>Custom special effects for your abilities and attacks.</li>
@@ -165,7 +174,10 @@
                         <li>Special particles that follow your character.</li>
                     </ul>
 
-                    <a href="#" class="btn btn-alert" id="remove-item-4">Remove</a>
+                    <div class="cart-item-actions">
+                        <a href="https://buy.stripe.com/test_5kA5mfgfPcCJ9Yk3ci" class="btn btn-dark" target="_blank">Checkout</a>
+                        <a href="#" class="btn btn-alert" id="remove-item-4">Remove</a>
+                    </div>  
                 </div>
             </div>
         </div>
@@ -179,8 +191,12 @@
                 <span>There are no items in your cart.</span>
             </div>
         </div>
-
-        <a href="../HTML/Checkout.html" class="btn btn-dark">Checkout</a>          
+        
+        <!--=== Total Price Section ===-->
+        <div class="cart-total" id="cart-total">
+            <h2>Total: <span id="total-price">€0.00</span></h2>
+        </div>
+          
     </section>
 
     <!--=== Footer Section ===-->
@@ -188,17 +204,17 @@
         <div class="footer-container flex">
             <div class="footer-credits">
                 <div class="footer-credits-photo flex">
-                    <a class="flex" title="Henry8K" href="https://github.com/Henry8K">
+                    <a class="flex" title="" href="">
                         <img class="f-h" src="../Images/Henry8K.webp" alt="Imagem de perfil de Henry8K" width="50px" height="50px">
-                        <h2>Henry8K</h2>
+                        <h2></h2>
                     </a>
                 </div>
             </div>
     
             <div class="footer-items">
-                <span class="sp-1">©2023 Dynathi | All Rights Reserved.</span>
+                <span class="sp-1">©2026 Dynathi | All Rights Reserved.</span>
                 <span class="sp-2">Minecraft is a trademark of Mojang and Dynathi is not affiliated with or endorsed by Mojang.</span>
-                <span class="sp-3">Made by Henry8K.</span>
+                <span class="sp-3">Made by VloeiNetwork & VloeiCoin Gaming.</span>
             </div>
     
             <div class="footer-socials flex">

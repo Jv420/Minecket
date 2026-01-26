@@ -4,11 +4,83 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Error! Dynathi</title>
+    <title>Checkout - Dynathi</title>
+    <link rel="shortcut icon" href="../Images/logo.webp" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/Base.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .checkout-container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+        }
+        
+        .checkout-container h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .checkout-container p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #45a049;
+        }
+        
+        .btn-secondary {
+            background-color: #666;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #555;
+        }
+    </style>
 </head>
 
 <body>
-    <p>Checkout page not configured!</p>
-    <a href="../index.html">Back to home.</a>
+    <div class="checkout-container">
+        <h1>Direct Checkout</h1>
+        <p>Our checkout process is handled directly through Stripe for maximum security. Please return to the cart page and click the "Checkout" button next to each item to complete your purchase.</p>
+        <p>Each item has its own secure Stripe checkout link for easy and safe payments.</p>
+        
+        <div style="margin-top: 30px;">
+            <a href="../HTML/Cart.html" class="btn">Back to Cart</a>
+            <a href="../HTML/Shop.html" class="btn btn-secondary">Continue Shopping</a>
+        </div>
+        
+        <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee;">
+            <small style="color: #999;">
+                <strong>Secure Payment:</strong> All payments are processed through Stripe with 256-bit SSL encryption.
+            </small>
+        </div>
+    </div>
 </body>
 </html>

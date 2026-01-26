@@ -63,44 +63,95 @@ function addToCart(item) {
         if(!cartObj.includes(item)) {
             cartObj.push(item);
             localStorage.setItem('cart', JSON.stringify(cartObj));
+            return true; // Item toegevoegd
         }
     } else {
         localStorage.setItem('cart', JSON.stringify([item]));
+        return true; // Item toegevoegd
     }
+    return false; // Item was al in winkelwagen
 }
 
-function buyItem(button, item) {
-    button.addEventListener('click', (event) => {
-        event.preventDefault();
-        addToCart(item);
-        const successPopup = document.getElementById('success-add');
-        successPopup.classList.add('active');
-        setTimeout(() => {
-            successPopup.classList.remove('active');
-        }, 4000);
-    });
-}
+// Voeg event listeners toe voor buy knoppen
+document.addEventListener('DOMContentLoaded', function() {
+    // Buy button voor item 1
+    const buyBtn1 = document.getElementById('buy-item-1');
+    if (buyBtn1) {
+        buyBtn1.addEventListener('click', function(event) {
+            event.preventDefault();
+            const added = addToCart('cart-item-1');
+            if (added) {
+                const successPopup = document.getElementById('success-add');
+                successPopup.classList.add('active');
+                setTimeout(() => {
+                    successPopup.classList.remove('active');
+                }, 3000);
+                
+                // Open Stripe checkout in nieuw tabblad na korte delay
+                setTimeout(() => {
+                    window.open(this.href, '_blank');
+                }, 500);
+            }
+        });
+    }
 
-// BUY FOR ITEM SHOP 1
-buyItem(
-    document.getElementById('buy-item-1'),
-    'cart-item-1'
-);
+    // Buy button voor item 2
+    const buyBtn2 = document.getElementById('buy-item-2');
+    if (buyBtn2) {
+        buyBtn2.addEventListener('click', function(event) {
+            event.preventDefault();
+            const added = addToCart('cart-item-2');
+            if (added) {
+                const successPopup = document.getElementById('success-add');
+                successPopup.classList.add('active');
+                setTimeout(() => {
+                    successPopup.classList.remove('active');
+                }, 3000);
+                
+                setTimeout(() => {
+                    window.open(this.href, '_blank');
+                }, 500);
+            }
+        });
+    }
 
-// BUY FOR ITEM SHOP 2
-buyItem(
-    document.getElementById('buy-item-2'),
-    'cart-item-2'
-);
+    // Buy button voor item 3
+    const buyBtn3 = document.getElementById('buy-item-3');
+    if (buyBtn3) {
+        buyBtn3.addEventListener('click', function(event) {
+            event.preventDefault();
+            const added = addToCart('cart-item-3');
+            if (added) {
+                const successPopup = document.getElementById('success-add');
+                successPopup.classList.add('active');
+                setTimeout(() => {
+                    successPopup.classList.remove('active');
+                }, 3000);
+                
+                setTimeout(() => {
+                    window.open(this.href, '_blank');
+                }, 500);
+            }
+        });
+    }
 
-// BUY FOR ITEM SHOP 3
-buyItem(
-    document.getElementById('buy-item-3'),
-    'cart-item-3'
-);
-
-// BUY FOR ITEM SHOP 4
-buyItem(
-    document.getElementById('buy-item-4'),
-    'cart-item-4'
-);
+    // Buy button voor item 4
+    const buyBtn4 = document.getElementById('buy-item-4');
+    if (buyBtn4) {
+        buyBtn4.addEventListener('click', function(event) {
+            event.preventDefault();
+            const added = addToCart('cart-item-4');
+            if (added) {
+                const successPopup = document.getElementById('success-add');
+                successPopup.classList.add('active');
+                setTimeout(() => {
+                    successPopup.classList.remove('active');
+                }, 3000);
+                
+                setTimeout(() => {
+                    window.open(this.href, '_blank');
+                }, 500);
+            }
+        });
+    }
+});
