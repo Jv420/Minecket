@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Prijzen voor elk item
     const prices = {
-        'cart-item-1': 0.99,  // Bronze VIP
+        'cart-item-1': 3.99,  // Bronze VIP
         'cart-item-2': 5.99,  // Silver VIP
         'cart-item-3': 9.99,  // Gold VIP
         'cart-item-4': 2.99   // Cosmetics
@@ -117,4 +117,5 @@ document.addEventListener('DOMContentLoaded', function() {
             location.reload();
         });
     }
+
 });
